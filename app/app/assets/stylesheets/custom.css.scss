@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 $navbar-default-bg: #fff;
 $navbar-default-color: #fff;
+=======
+$navbar-default-bg: #E8CDC8;
+$navbar-default-color: #E8CDC8;
+>>>>>>> 481b2c91764625c0ae59953153d0f9497eb65eb0
 
 
 @import "bootstrap-sprockets";
@@ -7,14 +12,24 @@ $navbar-default-color: #fff;
 
 #logo {
 	margin-top: 10px;
+<<<<<<< HEAD
 	/*border-color: #fff;*/
 	/*background-color: #fff;*/
+=======
+	border-color: #B29491;
+	background-color: #B29491;
+>>>>>>> 481b2c91764625c0ae59953153d0f9497eb65eb0
 	margin-bottom: 10px;
 	float: left;
 	margin-right: 30px;
 	font-size: 2em;
+<<<<<<< HEAD
 	color: 081C2E;
 	/*text-transform: uppercase;*/
+=======
+	color: #fff;
+	text-transform: uppercase;
+>>>>>>> 481b2c91764625c0ae59953153d0f9497eb65eb0
 	letter-spacing: -1px;
 	padding-top: 9px;
 	font-weight: bold;
@@ -27,6 +42,7 @@ $navbar-default-color: #fff;
 
 body{
 	padding-top: 80px;
+<<<<<<< HEAD
 	background-color: #fff;
 }
 
@@ -42,6 +58,19 @@ float:right;
 	border-color: #fff;
 	background-color: #fff;
 	color: #081C2E;
+=======
+	background-color: #FFEBE9;
+}
+
+#btn {
+ 	margin-left: 25px;
+ 	margin-right: 10px;
+	float: left;
+	margin-top:18px;
+	border-color: #B29491;
+	background-color: #B29491;
+	color: white;
+>>>>>>> 481b2c91764625c0ae59953153d0f9497eb65eb0
 	font-weight: bold;
 }
 
@@ -57,12 +86,15 @@ float:right;
 	text-align: center;
 
 }
+<<<<<<< HEAD
 #btns{
 	float: center;
 	margin-left: 25px;
 	margin-right: 25px;
 	float: center;
 }
+=======
+>>>>>>> 481b2c91764625c0ae59953153d0f9497eb65eb0
 
 h1,h2,h3,h4 {
 	line-height: 1;
@@ -81,6 +113,7 @@ h2{
 	margin-bottom: 30px;
 	text-align: center;
 	font-weight: normal;
+<<<<<<< HEAD
 	color:#081C2E;
 }
 
@@ -88,4 +121,7 @@ h2{
 	margin-top: 25px;
 	border-top: 1px solid #eaeaea;
 	color: #777;
+=======
+	color:#777;
+>>>>>>> 481b2c91764625c0ae59953153d0f9497eb65eb0
 }
