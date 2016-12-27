@@ -3,34 +3,23 @@
   <head>
     <title>S T O R E</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-default">
+    <header class="navbar navbar-inverse">
     <div class="container">
-      <%= link_to "MyStore", "", class:"btn btn-lg btn-success", id:"logo" %>
-      <div class="nav_item">
+      <%= link_to "MojSklep", "", class:"btn btn-default btn-lg", id:"logo" %>
 
-      <%= link_to "Main", "", class:"btn btn-defualt btn-warning", id:"btn" %>
       </div>
-      <div class="nav_item">
-        <%= link_to "Woman", "", class:"btn btn-defualt btn-warning", id:"btn" %>
-      </div>
-      <div class="nav_item">
-        <%= link_to "Man", "", class:"btn btn-defualt btn-warning", id:"btn" %>
-      </div>
-      <div class="nav_item">
-        <%= link_to "Kid", "", class:"btn btn-defualt btn-warning", id:"btn" %>
-      </div>
-
     </div>
    </header>
 
    <div class="container">
         <%= yield %>
+        <div class="footer">
+        <p>&copy; MojSklep 2015</p>
    </div>
 
 

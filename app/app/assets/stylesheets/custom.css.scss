@@ -1,5 +1,5 @@
-$navbar-default-bg: #E8CDC8;
-$navbar-default-color: #E8CDC8;
+$navbar-default-bg: #fff;
+$navbar-default-color: #fff;
 
 
 @import "bootstrap-sprockets";
@@ -7,14 +7,14 @@ $navbar-default-color: #E8CDC8;
 
 #logo {
 	margin-top: 10px;
-	border-color: #B29491;
-	background-color: #B29491;
+	/*border-color: #fff;*/
+	/*background-color: #fff;*/
 	margin-bottom: 10px;
 	float: left;
 	margin-right: 30px;
 	font-size: 2em;
-	color: #fff;
-	text-transform: uppercase;
+	color: 081C2E;
+	/*text-transform: uppercase;*/
 	letter-spacing: -1px;
 	padding-top: 9px;
 	font-weight: bold;
@@ -27,17 +27,21 @@ $navbar-default-color: #E8CDC8;
 
 body{
 	padding-top: 80px;
-	background-color: #FFEBE9;
+	background-color: #fff;
+}
+
+#btns {
+float:right;
 }
 
 #btn {
- 	margin-left: 25px;
- 	margin-right: 10px;
+ 	margin-left: 10px;
+ 	margin-right: 100px;
 	float: left;
-	margin-top:18px;
-	border-color: #B29491;
-	background-color: #B29491;
-	color: white;
+	margin-top:10px;
+	border-color: #fff;
+	background-color: #fff;
+	color: #081C2E;
 	font-weight: bold;
 }
 
@@ -77,5 +81,11 @@ h2{
 	margin-bottom: 30px;
 	text-align: center;
 	font-weight: normal;
-	color:#777;
+	color:#081C2E;
+}
+
+.footer{
+	margin-top: 25px;
+	border-top: 1px solid #eaeaea;
+	color: #777;
 }
