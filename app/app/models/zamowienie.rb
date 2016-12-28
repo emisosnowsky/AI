@@ -1,5 +1,5 @@
 class Zamowienie < ActiveRecord::Base
 	belongs_to :klient
-	belongs_to :szczegoly
-	belongs_to :platnosc
+	has_one :szczegoly
+	has_one :platnosc
 end

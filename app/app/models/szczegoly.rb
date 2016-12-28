@@ -1,4 +1,4 @@
 class Szczegoly < ActiveRecord::Base
 	has_many :produkts
-	belongs_to :zamowienie
+	has_one :zamowienie
 end
