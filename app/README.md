@@ -28,6 +28,8 @@ email (miedzy 5 a 30 znakami)
 password (miedzy 5 a 30 znakami)
 imie (miedzy 5 a 30 znakami)
 nazwisko (miedzy 5 a 30 znakami)
+
+
 nr_telefonu (miedzy 9 a 12 znakow)
 miejscowosc (miedzy 5 a 30 znakami)
 ulica  (miedzy 5 a 30 znakami)

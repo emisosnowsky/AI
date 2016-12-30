@@ -10,61 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161228181143) do
+ActiveRecord::Schema.define(version: 20161230183816) do
 
-  create_table "kategoria", force: :cascade do |t|
-    t.string "nazwa_kategorii"
-    t.string "opis_kategorii"
-    t.string "obraz_kategorii"
+  create_table "categories", force: :cascade do |t|
+    t.string "category_name"
+    t.string "category_descript"
   end
 
-  create_table "klients", force: :cascade do |t|
+  create_table "customers", force: :cascade do |t|
     t.string   "login"
     t.string   "email"
     t.string   "password"
-    t.string   "imie"
-    t.string   "nazwisko"
-    t.string   "miejscowosc"
-    t.string   "ulica"
-    t.string   "poczta"
-    t.string   "kraj"
-    t.integer  "nr_telefonu"
-    t.integer  "nr_domu"
-    t.integer  "nr_mieszkania"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "lastname"
+    t.string   "address"
+    t.decimal  "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "platnoscs", force: :cascade do |t|
-    t.string "typ_platnosci"
+  create_table "details", force: :cascade do |t|
+    t.integer "order_amount"
+    t.integer "order_id"
+    t.integer "product_id"
   end
 
-  create_table "produkts", force: :cascade do |t|
-    t.string  "kod_produktu"
-    t.string  "nazwa_produktu"
-    t.string  "obraz_produktu"
-    t.string  "opis_produktu"
-    t.integer "cena_produktu"
-    t.integer "id_kategorii"
+  create_table "orders", force: :cascade do |t|
+    t.string   "order_number"
+    t.string   "totalprice"
+    t.string   "payment_type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "customer_id"
   end
 
-  create_table "szczegolies", force: :cascade do |t|
-    t.integer "ilosc_produktow"
-    t.integer "cena_calkowita"
-    t.integer "id_zamowienia"
-    t.integer "id_produktu"
-    t.integer "create_at"
-    t.string  "kod_produktu"
-    t.integer "cena_produktu"
-  end
-
-  create_table "zamowienies", force: :cascade do |t|
-    t.string   "nr_zamowienia"
-    t.integer  "id_zamowienia"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "klient_id"
-    t.integer  "platnosc_id"
+  create_table "products", force: :cascade do |t|
+    t.string   "product_code"
+    t.string   "product_name"
+    t.string   "product_descript"
+    t.string   "product_price"
+    t.string   "product_image"
+    t.integer  "amount"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "category_id"
   end
 
 end
