@@ -1,0 +1,25 @@
+<h1>Produkty w sklepie</h1>
+<hr/>
+
+<% @products.each do |product| %>
+	<div class="row">
+
+		<div class="col-md-2">
+		<section class="customer_info center">
+			<%= gravatar_for product.category, size: 100 %>
+			<h5>Kategoria: <%= product.category.category_name %></h5>
+
+		</section>
+		</div>
+
+		<div class="col-lg-8 well">
+			<h4><%= link_to product.product_name, " " %></h4>
+			<p><%= product.product_price %></p>
+			<p>
+				<span class='quiet'><small><%= time_ago_in_words(product.created_at) %> ago</small></span>
+			</p>
+
+		</div>
+	</div>
+
+<% end %>

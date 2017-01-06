@@ -53,7 +53,7 @@ class ProductTest < ActiveSupport::TestCase
 	end
 
 	test "product_descript length should not be too long" do 
-		@product.product_descript = "a" *41
+		@product.product_descript = "a" *201
 		assert_not @product.valid?
 	end 
 

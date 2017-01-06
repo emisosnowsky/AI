@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20161230183816) do
   end
 
   create_table "customers", force: :cascade do |t|
-    t.string   "login"
+    t.string   "login"[jkl;=pm,io=;m,]
     t.string   "email"
     t.string   "password"
     t.string   "name"
