@@ -13,12 +13,13 @@
       <%= link_to "MojSklep", home_path, class:"btn btn-default btn-lg", id:"logo" %>
     <div class="nav nav-pills">
       <%= link_to "Wszystkie produkty", products_path, class:"btn btn-default", id:"products" %>
-      </div>
-
-      </div>
+    </div>
+    </div>
    </header>
 
    <div class="container">
+      <%= render 'layouts/messages' %>
+
         <%= yield %>
         <div class="footer">
         <p>&copy; MojSklep 2017</p>
