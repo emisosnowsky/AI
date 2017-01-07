@@ -1,6 +1,5 @@
-<p>
-	<h1><%= @product.product_name %></h1>
-</p>
+<%= render 'shared/page_title', title: @product.product_name %>
+
 <div class="row">
 	<div class="col-md-4-pull-right center">
 		<%= gravatar_for @product.category, size: 200 %>
@@ -10,6 +9,7 @@
 
 	</div>
 	<div class="col-md-8">
+
 		<h3> <%= @product.product_descript %></h3>
 		<div class="well">
 			<p>
@@ -19,5 +19,5 @@
 		</div>
 	</div>
 </div>
-
+<h5><%= link_to "Kup produkt", " ", class: "btn btn-success pull-center" %></h5>
 <h5><%= link_to "Wróć do listy produktów", products_path, class: "btn btn-warning btn-small" %></h5>

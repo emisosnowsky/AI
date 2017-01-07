@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
 
-	def signup
+	def new
 		@customer = Customer.new
 	end
 

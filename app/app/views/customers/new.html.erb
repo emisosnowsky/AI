@@ -1,19 +1,6 @@
-<h1><strong>Zarejestruj się w sklepie</strong></h1>
+<%= render 'shared/page_title', title: "Zarejestruj się w sklepie" %>
+<%= render 'shared/errors', obj: @customer %>
 
-<% if @customer.errors.any? %>
-	<div class="row">
-		<div class="alert alert-danger col-md-8 col-md-offset-2">
-		<h5>Popraw podane błędy:</h5>
-		<ul>
-			<% @customer.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
-			<% end %>
-		</ul>
-		</div>
-	</div>
-<% end %>
-
-<hr/>
 	<h2><strong>Aby utworzyć konto, podaj swój login, imię, nazwisko adres i telefon poniżej!</strong></h2>
 
 <div class="row">
