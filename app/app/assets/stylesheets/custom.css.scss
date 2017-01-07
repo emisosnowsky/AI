@@ -20,6 +20,16 @@ $navbar-default-color: #fff;
 	font-weight: bold;
 }
 
+#products {
+	margin-top: 20px;
+	border-color: #B29491;
+	background-color: #B29491;
+	font-size: 1em;
+	color: 081C2E;
+	padding-top: 9px;
+	font-weight: bold;
+}
+
 #logo:hover {
 	color: white;
 	text-decoration: none;
@@ -89,4 +99,13 @@ h2{
 	margin-top: 25px;
 	border-top: 1px solid #eaeaea;
 	color: #777;
+}
+
+.category_info {
+	matgin-top: 10px;
+
+}
+
+.gravatar {
+	border-radius: 10px;
 }

@@ -10,10 +10,12 @@
   <body>
     <header class="navbar navbar-inverse">
     <div class="container">
-      <%= link_to "MojSklep", "", class:"btn btn-default btn-lg", id:"logo" %>
+      <%= link_to "MojSklep", home_path, class:"btn btn-default btn-lg", id:"logo" %>
+    <div class="nav nav-pills">
+      <%= link_to "Wszystkie produkty", products_path, class:"btn btn-default", id:"products" %>
+      </div>
 
       </div>
-    </div>
    </header>
 
    <div class="container">
