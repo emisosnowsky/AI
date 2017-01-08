@@ -6,11 +6,12 @@
 	<p>
 		<h5>Znajduje się w kategorii: <%= @product.category.category_name %></h5>
 	</p>
-
 	</div>
 	<div class="col-md-8">
-
 		<h3> <%= @product.product_descript %></h3>
+		<div class:"show_product">
+			<%= image_tag(@product.picture.url, class: "gravatar") if @product.picture? %>
+		</div>
 		<div class="well">
 			<p>
 			<strong>Cena: </strong>

@@ -8,4 +8,5 @@ class Product < ActiveRecord::Base
 	validates :product_name, presence: true, length: {minimum: 4, maximum: 40}
 	validates :product_descript, presence: true, length: {minimum: 4, maximum: 200}
 	validates :product_price, presence: true
+
 end
