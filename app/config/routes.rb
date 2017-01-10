@@ -20,6 +20,12 @@ Rails.application.routes.draw do
   	delete '/logout',  to: 'sessions#destroy'
 
     resources :products
-    resources :customers
+    resources :customers, only: [:new, :create, :edit, :update, :show]
+    
+
+  	get 'admin' => 'admin#index'
+  	controller :sessions do
+  		get 'login'
+  	end
 
 end
