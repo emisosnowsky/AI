@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
  	
+  get 'sessions/new'
+
+  get 'session/new'
+
  	get '/home', to: 'pages#home'
 
 
@@ -11,9 +15,9 @@ Rails.application.routes.draw do
 
     #get '/signup', to: 'customers#signup'
     
-   #get '/login', to: 'customers#login'
-    
-    #get '/logout', to: 'customers#logout'
+  	get    '/login',   to: 'sessions#new'
+  	post   '/login',   to: 'sessions#create'
+  	delete '/logout',  to: 'sessions#destroy'
 
     resources :products
     resources :customers
