@@ -5,21 +5,16 @@
 
 		<div class="col-md-2">
 		<section class="customer_info center">
-			<%= gravatar_for product.category, size: 100 %>
-			<h5>Kategoria: <%= product.category.category_name %></h5>
-
+		    <%= image_tag(product.product_image, :size => "150x200") %> 
 		</section>
 		</div>
 
 		<div class="col-lg-6 well">
-			<h4><%= link_to product.product_name,product_path(product) %></h4>
+			<h4><strong><%= link_to product.product_name,product_path(product) %></strong></h4>
 			<p><%= product.product_price %></p>
 			<p>
 				<span class='quiet'><small><%= time_ago_in_words(product.created_at) %> ago</small></span>
 			</p>
-		</div>
-		<div class="col-md-4">
-		<%= image_tag(product.picture.url, size: "250x150", class: "gravatar") if product.picture? %>
 		</div>
 	</div>
 	<hr/>

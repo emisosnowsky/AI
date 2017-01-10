@@ -1,5 +1,4 @@
 class Customer < ActiveRecord::Base
-	has_secure_password
 	has_many :orders
 	before_save { self.email = email.downcase }
 	validates :name, presence: true, length: {minimum: 3, maximum: 40}
@@ -12,13 +11,4 @@ class Customer < ActiveRecord::Base
 	validates :password, presence: true, length: {minimum: 3, maximum: 40}
 	validates :address, presence: true, length: {minimum: 3, maximum: 200}
 
-	mount_uploader :picture, PictureUploader
-	validate :picture_size
-
-	private 
-		def picture_size
-			if picture_size > 5.megabytes
-				errors.add(:picture, "should be less than 5MB")
-			end
-		end
 end

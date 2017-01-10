@@ -1,24 +1,16 @@
 <%= render 'shared/page_title', title: @product.product_name %>
-
+		    	<p><h1><%= @product.product_price %></h1></p>
 <div class="row">
-	<div class="col-md-4-pull-right center">
-		<%= gravatar_for @product.category, size: 200 %>
-	<p>
-		<h5>Znajduje się w kategorii: <%= @product.category.category_name %></h5>
-	</p>
-	</div>
-	<div class="col-md-8">
-		<h3> <%= @product.product_descript %></h3>
+	<div class="col-md-8-pull center well">
 		<div class:"show_product">
-			<%= image_tag(@product.picture.url, class: "gravatar") if @product.picture? %>
-		</div>
-		<div class="well">
-			<p>
-			<strong>Cena: </strong>
-			</p>
-			<%= @product.product_price %>
+		    <%= image_tag(@product.product_image, :alt => "rss feed") %>
+		    	<h3><strong><%= @product.product_name %></strong></h3>	    	
+		    	<h5><strong>Cena: <%= @product.product_price %></strong></h5>
+		    	<h5> <%= @product.product_descript %></h5>
+			<p><h5>Kategoria: <%= @product.category.category_name %></h5></p>
+			<h5><%= link_to "Kup produkt", " ", class: "btn btn-success pull-center" %></h5>
+<h5><%= link_to "Wróć do listy produktów", products_path, class: "btn btn-warning btn-small" %></h5>
 		</div>
 	</div>
 </div>
-<h5><%= link_to "Kup produkt", " ", class: "btn btn-success pull-center" %></h5>
-<h5><%= link_to "Wróć do listy produktów", products_path, class: "btn btn-warning btn-small" %></h5>
+

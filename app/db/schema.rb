@@ -25,9 +25,8 @@ ActiveRecord::Schema.define(version: 20170110085149) do
     t.string   "lastname"
     t.string   "address"
     t.decimal  "phone"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "details", force: :cascade do |t|
@@ -55,7 +54,6 @@ ActiveRecord::Schema.define(version: 20170110085149) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "category_id"
-    t.string   "picture"
   end
 
 end
