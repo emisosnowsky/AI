@@ -4,4 +4,37 @@ class Detail < ActiveRecord::Base
 
 	validates :product_id, presence: true
 	validates :order_id, presence: true
+
+	def unit_price
+		if persisted?
+			self[:unit_price]
+		else
+		product.price
+		end
+	end
+
+	def total_price
+		unit_price * order_amount
+	end
+
+	private
+
+	def product_present
+		if product.nil?
+			error.add(:product, "Wystąpił błąd")
+		end
+	end
+
+	def order_present
+		if order.nil?
+			error.add(:order, "Zamówienie jest błędne")
+		end
+	end
+
+	def finalize
+		self[:unit_price] = unit_price
+		self[:total_price] = order_amount * self[:unit_price] 
+	end
+
+
 end

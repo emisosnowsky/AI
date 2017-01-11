@@ -5,4 +5,16 @@ class Order < ActiveRecord::Base
 	has_many :products, :through => :details
 	validates :order_number, presence: true, length: {minimum: 12, maximum: 40}
 	validates :totalprice, presence: true
+
+	before_save :update_subtotal
+
+	def subtotal
+		details.collect { |d| d.valid? ? (d.order_amount * d.unit_price) : 0 }.sum
+	end
+
+	private 
+
+	def update_subtotal
+		self["subtotal"] = subtotal
+
 end

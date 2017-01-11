@@ -34,24 +34,26 @@ ActiveRecord::Schema.define(version: 20170111104321) do
     t.integer "order_amount"
     t.integer "order_id"
     t.integer "product_id"
+    t.decimal "unit_price"
+    t.decimal "total_price"
   end
 
   create_table "orders", force: :cascade do |t|
     t.string   "order_number"
-    t.string   "totalprice"
+    t.decimal  "totalprice"
     t.string   "payment_type"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "customer_id"
+    t.decimal  "subtotal"
   end
 
   create_table "products", force: :cascade do |t|
     t.string   "product_code"
     t.string   "product_name"
     t.string   "product_descript"
-    t.string   "product_price"
+    t.decimal  "product_price"
     t.string   "product_image"
-    t.integer  "amount"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "category_id"
