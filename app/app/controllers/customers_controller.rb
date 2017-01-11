@@ -13,6 +13,7 @@ class CustomersController < ApplicationController
 
 		if @customer.save
 			flash[:success] = "Rejestracja przebiegła pomyślnie. Jesteś zarejestrowany!"
+			session[:customer_id] = @customer.id
 			redirect_to products_path
 		else
 			render :new

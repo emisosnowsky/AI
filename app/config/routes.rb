@@ -12,9 +12,9 @@ Rails.application.routes.draw do
 
     #get '/signup', to: 'customers#signup'
     
-  	get    '/login',   to: 'sessions#new'
-  	post   '/login',   to: 'sessions#create'
-  	delete '/logout',  to: 'sessions#destroy'
+  	get    '/login',   to: 'logins#new'
+  	post   '/login',   to: 'logins#create'
+  	get 	'/logout', to: 'logins#destroy'
 
     resources :products
     resources :customers

@@ -13,16 +13,21 @@
       <%= link_to "MojSklep", home_path, class:"btn btn-default btn-lg", id:"logo" %>
     <div class="nav_item">
       <%= link_to "Wszystkie produkty", products_path, class:"btn btn-default", id:"products" %>
-
     </div> 
-    <div class="container">
+     <div class="container">
+    <% if logged_in? %>
+      <%= link_to "Wyloguj się", logout_path, class:"btn btn-default", id:"products2" %>
+    <% else %>
       <%= link_to "Zaloguj się", login_path, class:"btn btn-default", id:"products2" %>
-    </div>      
-   </div>
-   </header>
-       <div class="container">
-            <%= image_tag("img5.jpg", :size => "1138x373") %>  
+    <% end %>
       </div>
+  </div> 
+   </header>
+
+
+   <div class="container">
+        <%= image_tag("img5.jpg", :size => "1138x373") %>  
+  </div>
 
 
    <div class="container">
