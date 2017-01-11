@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+	before_action :set_customer, only: [:edit, :update, :show]
+	before_action :require_same_customer, only: [:edit, :update]
 
 	def index
 		@customers = Customer.all
@@ -21,11 +23,9 @@ class CustomersController < ApplicationController
 	end
 
 	def edit
-		@customer = Customer.find(params[:id])
 	end
 
 	def update
-		@customer = Customer.find(params[:id])	
 		if @customer.update(customer_params)
 			flash[:success] = "Twój profil zostal edytowany pomyślnie"
 			redirect_to products_path # TODO change to show chef page
@@ -35,7 +35,6 @@ class CustomersController < ApplicationController
 	end
 
 	def show
-		@customer = Customer.find(params[:id])
 	end
 
 	private 
@@ -43,5 +42,18 @@ class CustomersController < ApplicationController
 		def customer_params
 			params.require(:customer).permit(:login, :email, :password, :name, :lastname, :address, :phone)
 		end
+
+		def set_customer
+			@customer = Customer.find(params[:id])
+		end
+
+	def require_same_customer
+		if current_customer != @customer
+			flash[:danger] = "Uwaga, możesz edytować tylko swój profil."
+			redirect_to home_path
+		end
+	end
+
+
 
 end
