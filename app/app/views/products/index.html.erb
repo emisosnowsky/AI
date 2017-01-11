@@ -1,6 +1,8 @@
 <%= render 'shared/page_title', title: "Produkty w sklepie" %>
 
+
 <% @products.each do |product| %>
+  <div class="container">
 	<div class="row">
 
 		<div class="col-md-4">
@@ -18,4 +20,5 @@
 		</div>
 	</div>
 	<hr/>
+	</div>
 <% end %>

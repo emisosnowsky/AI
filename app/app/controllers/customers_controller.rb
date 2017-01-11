@@ -28,7 +28,7 @@ class CustomersController < ApplicationController
 	def update
 		if @customer.update(customer_params)
 			flash[:success] = "Twój profil zostal edytowany pomyślnie"
-			redirect_to products_path # TODO change to show chef page
+			redirect_to customer_path(@customer)
 		else 
 			render 'edit'
 		end
