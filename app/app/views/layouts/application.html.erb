@@ -16,6 +16,7 @@
     </div> 
      <div class="container">
     <% if logged_in? %>
+      <%= link_to "Mój profil", customer_path(current_customer), class:"btn btn-default", id:"products3" %>      
       <%= link_to "Wyloguj się", logout_path, class:"btn btn-default", id:"products2" %>
     <% else %>
       <%= link_to "Zaloguj się", login_path, class:"btn btn-default", id:"products2" %>

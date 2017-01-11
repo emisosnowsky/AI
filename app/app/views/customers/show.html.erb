@@ -8,5 +8,9 @@
 		 <p><h4>nazwisko: <%=@customer.lastname %></h3></p>
 		 <p><h4>adres: <%=@customer.address %></h3></p>
 		 <p><h4>nr telefonu: <%=@customer.phone %></h3></p>
+		 <hr/>
+		 <% if logged_in? and @customer == current_customer %>
+		 <h5><%= link_to "Edytuj profil", edit_customer_path(current_customer), class: "btn btn-warning btn-small" %></h5>
+		 <% end %>
 	</div>
 </div>
