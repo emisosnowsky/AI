@@ -1,0 +1,32 @@
+<%= render 'shared/errors', obj: @customer %>
+
+<div class="row">
+	<div class="well col-md8 col md-offset-2">
+		<%= form_for(@customer, html: { multipart: true }) do |f| %>
+			<%= f.label :login %>
+			<%= f.text_field :login %>
+
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+      		<%= f.label :password %>
+      		<%= f.password_field :password, class: 'form-control' %>
+
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+
+			<%= f.label :lastname %>
+			<%= f.text_field :lastname %>
+
+			<%= f.label :address %>
+			<%= f.text_field :address %>
+
+			<%= f.label :phone %>
+			<%= f.text_field :phone %>
+
+
+			<%= f.submit(@customer.new_record? ? 'Stwórz konto' : 'Edytuj konto', class: "btn btn-success") %>
+
+			<% end %>
+	</div>
+</div>

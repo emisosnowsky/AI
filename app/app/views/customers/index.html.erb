@@ -1,0 +1,19 @@
+<%= render 'shared/page_title', title: "Zarejestrowani klienci" %>
+
+<% @customers.each do |customer| %>
+
+	<div class="row">
+		<div class="col-md-12 center well">
+			 <p><h3><strong>login: <%=customer.login %></strong></h3></p>
+			 <p><h4>email: <%=customer.email %></h3></p>
+			 <p><h4>imie: <%=customer.name %></h3></p>
+			 <p><h4>nazwisko: <%=customer.lastname %></h3></p>
+			 <p><h4>adres: <%=customer.address %></h3></p>
+			 <p><h4>nr telefonu: <%=customer.phone %></h3></p>
+			 <p>
+				<span class='quiet'><small><%= time_ago_in_words(customer.created_at) %> ago</small></span>
+			</p>
+		</div>
+	</div>
+	<hr/>
+<% end %>

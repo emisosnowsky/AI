@@ -11,4 +11,6 @@ class Customer < ActiveRecord::Base
 	validates :password, presence: true, length: {minimum: 3, maximum: 40}
 	validates :address, presence: true, length: {minimum: 3, maximum: 200}
 
+	has_secure_password
+
 end

@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
  	
-  get 'sessions/new'
-
-  get 'session/new'
 
  	get '/home', to: 'pages#home'
 
