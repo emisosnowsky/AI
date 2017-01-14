@@ -8,17 +8,20 @@ Rails.application.routes.draw do
 
  	#get '/categories', to: 'categories#index', as: 'show_categories' 
 
- 	#get 'product/buy', to: 'product#buy', as: 'buy_product'
+ 	  get 'products/buy', to: 'products#buy'
+ 	  
+ 	  get 'buy', to: 'products#buy'
 
     #get '/signup', to: 'customers#signup'
     
   	get    '/login',   to: 'logins#new'
   	post   '/login',   to: 'logins#create'
   	get 	'/logout', to: 'logins#destroy'
+  	
 
     resources :products
     resources :customers
-    resources :cart, only: [:show]
+    resources :carts
     resources :details, only: [:create, :update, :destroy]
 
 

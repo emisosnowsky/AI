@@ -6,15 +6,17 @@ class Order < ActiveRecord::Base
 	validates :order_number, presence: true, length: {minimum: 12, maximum: 40}
 	validates :totalprice, presence: true
 
-	before_save :update_subtotal
+	before_save :update_totalprice
 
-	def subtotal
+	def totalprice
 		details.collect { |d| d.valid? ? (d.order_amount * d.unit_price) : 0 }.sum
 	end
 
 	private 
 
-	def update_subtotal
-		self["subtotal"] = subtotal
+	def update_update_totalprice
+		self["totalprice"] = totalprice
+		
+	end
 
 end

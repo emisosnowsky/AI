@@ -1,7 +1,14 @@
 class CartsController < ApplicationController
 
 	def show 
-		@details = current_order.details
+		@detail = Detail.find(params[:id])
 	end
 
+	def index
+		@orders = Order.all	
+	end
+	
+	def new 
+		@order = Order.new
+	end
 end

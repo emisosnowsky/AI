@@ -1,16 +1,19 @@
 <%= render 'shared/page_title', title: @product.product_name %>
-		    	<p><h1><%= @product.product_price %></h1></p>
+		    	<p><h1><%= @product.product_price %> PLN</h1></p>
 <div class="row">
 	<div class="col-md-8-pull center well">
 		<div class:"show_product">
 		    <%= image_tag(@product.product_image, :size => "300x400") %>
 		    	<h3><strong><%= @product.product_name %></strong></h3>	    	
-		    	<h5><strong>Cena: <%= @product.product_price %></strong></h5>
+		    	<h5><strong>Cena: <%= @product.product_price %> PLN</strong></h5>
 		    	<h5> <%= @product.product_descript %></h5>
 			<p><h5>Kategoria: <%= @product.category.category_name %></h5></p>
-			<h5><%= link_to "Kup produkt", " ", class: "btn btn-success pull-center" %></h5>
-<h5><%= link_to "Wróć do listy produktów", products_path, class: "btn btn-warning btn-small" %></h5>
 		</div>
+		 		<% if logged_in? %>
+		 		<h5><%= link_to "Kup teraz", buy_path(@product), class: "btn btn-success btn-small" %></h5>
+				<h5><%= link_to "Dodaj do koszyka", new_cart_path, class: "btn btn-success btn-small" %></h5>
+				<hr/>
+			 <% end %>
+		<h5><%= link_to "Wróć do listy produktów", products_path, class: "btn btn-warning btn-small" %></h5>
 	</div>
 </div>
-
