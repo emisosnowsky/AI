@@ -1,5 +1,5 @@
 class LoginsController < ApplicationController
-
+#dodane
 	def new
  
 	end
@@ -15,6 +15,7 @@ class LoginsController < ApplicationController
 			render 'new'
 		end
 	end
+
 
 	def destroy
 		session[:customer_id] = nil
