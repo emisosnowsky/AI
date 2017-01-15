@@ -10,6 +10,7 @@
 			<p><h5>Kategoria: <%= @product.category.category_name %></h5></p>
 		</div>
 		 		<% if logged_in? %>
+		 		<br/>
 		 		<h5><%= link_to "Kup teraz", buy_path(@product), class: "btn btn-success btn-small" %></h5>
 				<h5><%= link_to "Dodaj do koszyka", new_cart_path, class: "btn btn-success btn-small" %></h5>
 				<hr/>
