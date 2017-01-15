@@ -2,6 +2,7 @@ class CartsController < ApplicationController
 
 	def show 
 		@detail = Detail.find(params[:id])
+		@product = Product.find(params[:id])
 	end
 
 	def index

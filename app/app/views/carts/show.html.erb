@@ -1,0 +1,17 @@
+<%= render 'shared/page_title', title: "Produkty w koszyku" %>
+
+<div class="row">
+	<div class="col-xs-12 col-centered center well">
+	    <div class:"show_product">
+		    <%= image_tag(@product.product_image, :size => "300x400") %>
+		    	<h3><strong><%= @product.product_name %></strong></h3>	    	
+		    	<h5><strong>Cena: <%= @product.product_price %> PLN</strong></h5>
+		    	<h5> <%= @product.product_descript %></h5>
+			<p><h5>Kategoria: <%= @product.category.category_name %></h5></p>
+		</div>
+		<% if logged_in? %>
+		<h5><%= link_to "Kup teraz", buy_path(@product), class: "btn btn-success btn-small" %></h5>		 
+		<h5><%= link_to "Wróc do profilu", customer_path(current_customer), class: "btn btn-warning btn-small" %></h5>
+		 <% end %>
+	</div>
+</div>
