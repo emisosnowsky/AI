@@ -1,1 +1,11 @@
 <%= render 'shared/page_title', title: "Koszyki" %>
+
+<% @orders.each do |order| %>
+    <div class="row">
+	    <div class="col-xs-12 col-centered center well">
+		    	    <h3><strong>Numer zamówienia: 
+		    	   	<%= order.order_number %></strong></h3>	 
+		    	   	 <h5><%= link_to "Produkty w zamowieniu", cart_path(order), class: "btn btn-success btn-small" %></h5>
+	    </div>
+    </div>
+<% end %>
