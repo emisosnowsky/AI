@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
  	  get 'products/buy', to: 'products#buy'
  	  
- 	  get 'buy', to: 'products#buy'
+ 	  get '/buy', to: 'products#buy'
 
     #get '/signup', to: 'customers#signup'
     
